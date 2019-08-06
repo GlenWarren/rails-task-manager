@@ -1,0 +1,17 @@
+<div class="container">
+  <%= @task.title %> -
+  <%= @task.details %>
+  <br>
+  Task status:
+  <% if @task.completed %>
+    <input type="checkbox" value="<% @task.completed %>" checked>
+    <% else %>
+    <input type="checkbox" value="<% @task.completed %>">
+  <% end %>
+  <br>
+  <br>
+  <%= link_to 'Edit', edit_task_path %>
+  <br>
+  <br>
+  <%= link_to 'Back', tasks_path %>
+</div>
